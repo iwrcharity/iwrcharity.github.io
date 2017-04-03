@@ -1,6 +1,6 @@
 <html>
 <!-- TODOS:
-	1.Figure out why ticker text is staying black
+	1. Figure out why ticker text is staying black
 	2. Get this on a heroku
 	3. Adjust column styling
 	4. Get little human svg and make a legend 
@@ -33,7 +33,6 @@
 		</div>
 	</div>
 	
-	
 
  	<script>
 var map = new Datamap({
@@ -42,11 +41,13 @@ var map = new Datamap({
             datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
             
             	// clears arcs, bubbles on each click of a country, could be useful
-            	$('#bubbles g.arc').empty();
+            	
             	$('#bubbles g.bubbles').empty();
 
             	//enables click a country, draw arc from that point to Ithaca
         		console.log("Entering arc drawing");
+        		// empty arcs
+        		map.arc([]);
         		map.arc([
         		{
         			strokeColor: '#6AE368',
@@ -70,7 +71,13 @@ var map = new Datamap({
   },
   fills: {
   	// sets to black for default
-    defaultFill: '#000000'
+    defaultFill: '#000000',
+    // controls inner colors of the bubbles
+    SYR: '#52BE80',
+    AUS: '#F5B041',
+    IND: '#943126',
+    BRA: '#ECF0F1'
+
   }
 });
 
@@ -107,18 +114,20 @@ d3.select('#ordinalScale').call(events.on("slide", function (evt, value){
 			name: "BRA",
 			refugees: "40",
 			caption:"Someone Just Like This",
-			details: 'Ive been reading books of old The legends and the myths Achilles and his gold Hercules and his gifts Spidermans control And Batman with his fists And clearly I dont see myself upon that list But she said, where dyou wanna go? How much you wanna risk? Im not looking for somebody With some superhuman gifts Some superhero Some fairytale bliss Just something I can turn to Somebody I can kiss'}
+			details: 'Ive been reading books of old The legends and the myths Achilles and his gold Hercules and his gifts Spidermans control And Batman with his fists And clearly I dont see myself upon that list But she said, where dyou wanna go? How much you wanna risk? Im not looking for somebody With some superhuman gifts Some superhero Some fairytale bliss Just something I can turn to Somebody I can kiss'
+		}
 	};
 
-	//clear bubbles and arcs on change of slider
-	$('#bubbles g.bubbles').empty();
-	$('#bubbles g.arc').empty();
+	
+	
 	
 
 	$('.description').empty();
 	$('.description').append("<h1 class='caption'>"+data[value].caption+"</h1><p class='details'>"+data[value].details+"</p>");
 
     console.log(value);
+    // clear arcs
+    map.arc([]);
     //draw green arc from selected slider val to Ithaca
     map.arc([
 	{
@@ -132,7 +141,8 @@ d3.select('#ordinalScale').call(events.on("slide", function (evt, value){
 	}
 	], 
 	{strokeWidth: 1, arcSharpness: 1.4});
-
+    // clear bubbles
+    map.bubbles([]);
     //draw red circle on selected slider val
 	map.bubbles([
 	{
@@ -141,6 +151,7 @@ d3.select('#ordinalScale').call(events.on("slide", function (evt, value){
 	    centered: data[value].name,
 	    refugees: data[value].refugees,
 	    borderColor: '#FF0000',
+	    fillKey: data[value].name
 	    // how to set fill color????
 	}
 	],
