@@ -1,0 +1,26 @@
+{
+  "name": "iwr_map",
+  "version": "1.0.0",
+  "description": "iwr map cusd",
+  "main": "d3.slider.js",
+  "dependencies": {
+    "datamaps": "^0.5.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gschultz49/IWR-Interactive-Map.git"
+  },
+  "keywords": [
+    "iwr"
+  ],
+  "author": "greg schultz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gschultz49/IWR-Interactive-Map/issues"
+  },
+  "homepage": "https://github.com/gschultz49/IWR-Interactive-Map#readme"
+}
