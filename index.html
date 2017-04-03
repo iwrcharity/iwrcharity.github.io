@@ -1,4 +1,13 @@
 <html>
+<!-- TODOS:
+	1.Figure out why ticker text is staying black
+	2. Get this on a heroku
+	3. Adjust column styling
+	4. Get little human svg and make a legend 
+	5. Style circle onhovers
+	6. Slider drag latency?
+
+ -->
 <head>
 	<script src="https://d3js.org/d3.v3.min.js"></script>
  	<!-- using v3 rather than v4 because datamaps wont operate without it -->
@@ -20,6 +29,7 @@
 			<h1 class="caption"> 1990 Bosnia conflict </h1>
 			<p class="details">Taking it slow, but it's not typicalHe already knows that my love is fire His heart was a stone, but then his hands roamed I turned him to gold and it took him higher Well, I'll be your daydream, I'll be your favorite things We could be beautiful Get drunk on the good life, I'll take you to paradise Say you'll never let me go Deep in my bones, I can feel you Take me back to a time only we knew Hideaway We could waste the night with an old film Smoke a little weed on the couch in the back room Hideaway Say you'll never let me go Say you'll never let me go Ah, ah, ah Ah, ah, ah Ah, ah, ah Say you'll never let me go Say you'll never let me go Say you'll never let me go Say you'll never let me go Deep in my bones, I can feel you Take me back to a time only we knew Hideaway We could waste the night with an old film Smoke a little weed on the couch in the back room Hideaway Say you'll never let me go Say you'll never let me go
 			<br> <br>sfljdshjl </p> 
+
 		</div>
 	</div>
 	
@@ -34,8 +44,6 @@ var map = new Datamap({
             	// clears arcs, bubbles on each click of a country, could be useful
             	$('#bubbles g.arc').empty();
             	$('#bubbles g.bubbles').empty();
-
-		
 
             	//enables click a country, draw arc from that point to Ithaca
         		console.log("Entering arc drawing");
@@ -61,11 +69,12 @@ var map = new Datamap({
     highlightFillColor: '#6AE368'
   },
   fills: {
+  	// sets to black for default
     defaultFill: '#000000'
   }
 });
 
-//generates slider
+// generates slider
 // little bit of latency due to json load, how to fix????
 events = d3.slider().scale(d3.scale.ordinal().domain(["NULL", "Syria", "Australia", "India", "Brazil"]).rangePoints([0, 1], 0.5)).axis(d3.svg.axis()).snap(true).value("NULL");
 
@@ -133,14 +142,15 @@ d3.select('#ordinalScale').call(events.on("slide", function (evt, value){
 	    refugees: data[value].refugees,
 	    borderColor: '#FF0000',
 	    // how to set fill color????
-	}],
+	}
+	],
 	//on hover, this is what will be displayed
 	{
 	  popupTemplate: function(geo, data) {
 	  	// console.log(data);
 	  	// console.log(data.name);
 	  	// console.log(data.refugees);
-	  	return '<h1>'+data.name+'</h1>';
+	  	return '<h1>Country Name: '+data.name+'</h1><h3>Number of Refugees: '+ data.refugees+'</h3>';
 	  }
 	});
 
