@@ -1,24 +1,30 @@
 body{
-	background-color: black;
+	background-color: black !important ;
+	color:white !important;
 }
 .header{
 	text-align: center;
 	color: white;
 }
-.map{
-	position: relative;
-	width: 49%; 
-	height: 60%;
-	display: inline-block;
-}
 .description{
-	float: left;
+	/*float: left;*/
+	/*margin: 0 !important;*/
+	/*margin-left: 2% !important;*/
 	color: white;
-	display: inline-block;
+	width: 95%;
+	/*margin-left: 5%;*/
+	/*display: inline-block;*/
 }
 .description h1{
 	text-align: center;
 }
 .description p{
 	text-align: left;
+}
+#ordinalSlider{
+	color: white;
+}
+#bubbles{
+	height: 60%;
+	width: 50%;
 }
