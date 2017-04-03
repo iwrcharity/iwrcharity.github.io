@@ -6,12 +6,16 @@
 	<!-- // <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script> -->
 	<script src="node_modules/datamaps/dist/datamaps.world.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css">
 	<!-- // <script src="node_modules/datamaps/dist/datamaps.usa.min.js"></script> -->
 </head>
 <body>
-	
-	<div id="arcs" style="position: relative; width: 50%; height: 90%;"></div>
-	<div id="bubbles" style="position: relative; width: 50%; height: 90%;"></div>
+	<h1 class="header"> Ithaca Through Refugees </h1>
+	<!-- <div id="arcs" style="position: relative; width: 50%; height: 90%;"></div> -->
+	<div id="bubbles" class="map"></div>
+	<div class="description">
+		<h1> 1990 Bosnia conflict </h1>
+		<p>Taking it slow, but it's not typicalHe already knows that my love is fire His heart was a stone, but then his hands roamed I turned him to gold and it took him higher Well, I'll be your daydream, I'll be your favorite things We could be beautiful Get drunk on the good life, I'll take you to paradise Say you'll never let me go Deep in my bones, I can feel you Take me back to a time only we knew Hideaway We could waste the night with an old film Smoke a little weed on the couch in the back room Hideaway Say you'll never let me go Say you'll never let me go Ah, ah, ah Ah, ah, ah Ah, ah, ah Say you'll never let me go Say you'll never let me go Say you'll never let me go Say you'll never let me go Deep in my bones, I can feel you Take me back to a time only we knew Hideaway We could waste the night with an old film Smoke a little weed on the couch in the back room Hideaway Say you'll never let me go Say you'll never let me go </p> </div>
  	<script>
 // 	var arcs = new Datamap({
 // 	  element: document.getElementById("arcs"),
@@ -96,6 +100,7 @@ var bubble_map = new Datamap({
             		console.log("Entering");
             		bubble_map.arc([
             		{
+            			strokeColor: '#6AE368',
             			origin: geography.id,
             			destination: {
             				latitude: '42.4440',
@@ -110,10 +115,11 @@ var bubble_map = new Datamap({
         },
   geographyConfig: {
     popupOnHover: false,
-    highlightOnHover: true
+    highlightOnHover: true,
+    highlightFillColor: '#6AE368'
   },
   fills: {
-    defaultFill: '#ABDDA4'
+    defaultFill: '#000000'
     // USA: 'blue',
     // RUS: 'red'
   }
