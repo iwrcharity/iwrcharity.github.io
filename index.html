@@ -123,7 +123,8 @@
 		
 	//remove and append this ticker's related data
 	$('.description').empty();
-	$('.description').append("<h1 class='caption'>"+data[value].caption+"</h1><p class='details'>"+data[value].details+"</p>");
+	$('.description').append("<h1 class='caption'>"+data[value].caption+"</h1><p class='details'>"
+		+data[value].details+"<br>Name: "+data[value].name+"<br>Refugees: "+data[value].refugees+"</p>");
 
     console.log(data[value]);
 
