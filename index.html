@@ -67,6 +67,10 @@
 	    highlightOnHover: true,
 	    highlightFillColor: '#6AE368'
 	  },
+	  //disables on hover for the bubbles
+	  bubblesConfig: {
+	  	popupOnHover: false,
+	  },
 	  fills: {
 	  	// sets to black for default
 	    defaultFill: '#000000',
@@ -148,19 +152,19 @@
 	    centered: data[value].name,
 	    refugees: data[value].refugees,
 	    borderColor: '#FF0000',
-	    fillKey: data[value].name
-	    // how to set fill color????
+	    fillKey: data[value].name,
 	}
-	],
-	//on hover, this is what will be displayed
-	{
-	  popupTemplate: function(geo, data) {
-	  	// console.log(data);
-	  	// console.log(data.name);
-	  	// console.log(data.refugees);
-	  	return '<h1>Country Name: '+data.name+'</h1><h3>Number of Refugees: '+ data.refugees+'</h3>';
-	  }
-	});
+	]
+	// on hover, this is what will be displayed
+	// {
+	//   popupTemplate: function(geo, data) {
+	//   	// console.log(data);
+	//   	// console.log(data.name);
+	//   	// console.log(data.refugees);
+	//   	return '<h1>Country Name: '+data.name+'</h1><h3>Number of Refugees: '+ data.refugees+'</h3>';
+	//   }
+	// }
+	);
 
 }));
 
