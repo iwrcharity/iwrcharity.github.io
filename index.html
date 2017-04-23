@@ -9,29 +9,83 @@
 
  -->
 <head>
+
 	<script src="https://d3js.org/d3.v3.min.js"></script>
  	<!-- using v3 rather than v4 because datamaps wont operate without it -->
 	<script src="http://d3js.org/topojson.v2.min.js"></script>
 	<script src="js/datamaps.world.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/jquery.gsap.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
 	<script src="js/d3.slider.js"></script>
+	 
+	<link rel="stylesheet" href="css/scroll_style.css" type="text/css">
+	<link rel="stylesheet" href="css/scroll_examples.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/d3.slider.css" type="text/css">
 	<link rel="stylesheet" href="css/foundation.min.css" type="text/css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 </head>
-<body>
+
+
+<style type="text/css">
+	.panel {
+		height: 100%;
+		width: 100%;
+	}
+	.panel.green {
+		margin-bottom: 400px
+	}
+</style>
+<section class="panel blue">
 	<h1 class="header"> Ithaca Through Refugees </h1>
 	<div class="row">
-		<div id="bubbles" class="small-12 large-6 columns">
+		 <div id="bubbles" class="small-12 large-6 columns">
 			<div id= "ordinalScale"></div>
 		</div>
 		<div class="description small-12 large-6 columns">
 			<h1 class="caption"> 1990 Bosnia conflict </h1>
 			<p class="details">Taking it slow, but it's not typicalHe already knows that my love is fire His heart was a stone, but then his hands roamed I turned him to gold and it took him higher Well, I'll be your daydream, I'll be your favorite things We could be beautiful Get drunk on the good life, I'll take you to paradise Say you'll never let me go Deep in my bones, I can feel you Take me back to a time only we knew Hideaway We could waste the night with an old film Smoke a little weed on the couch in the back room Hideaway Say you'll never let me go Say you'll never let me go Ah, ah, ah Ah, ah, ah Ah, ah, ah Say you'll never let me go Say you'll never let me go Say you'll never let me go Say you'll never let me go Deep in my bones, I can feel you Take me back to a time only we knew Hideaway We could waste the night with an old film Smoke a little weed on the couch in the back room Hideaway Say you'll never let me go Say you'll never let me go
 			<br> <br>sfljdshjl </p> 
-
 		</div>
-	</div>
+	</div> 
+</section>
+<section class="panel turqoise">
+	<b>TWO</b>
+</section>
+<section class="panel green">
+	<b>THREE</b>
+</section>
+<section class="panel bordeaux">
+	<b>FOUR</b>
+</section>
+<script>
+	$(function () { // wait for document ready
+		// init
+		var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+				triggerHook: 'onLeave'
+			}
+		});
+
+		// get all slides
+		var slides = document.querySelectorAll("section.panel");
+
+		// create scene for every slide
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+					triggerElement: slides[i]
+				})
+				.setPin(slides[i])
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+		}
+	});
+</script>
+	
+
 	
  	<script>
 	var map = new Datamap({
@@ -124,7 +178,9 @@
 	//remove and append this ticker's related data
 	$('.description').empty();
 	$('.description').append("<h1 class='caption'>"+data[value].caption+"</h1><p class='details'>"
-		+data[value].details+"<br>Name: "+data[value].name+"<br>Refugees: "+data[value].refugees+"</p>");
+		+data[value].details+"<br>Name: "+value+"<br>Refugees: "+data[value].refugees+"</p>");
+
+
 
     console.log(data[value]);
 
@@ -133,6 +189,7 @@
     //draw green arc from selected slider val to Ithaca
     map.arc([
 	{
+		//green
 		strokeColor: '#6AE368',
 		origin: data[value].name,
 		destination: {
@@ -168,7 +225,7 @@
 	);
 
 }));
-
 </script>
 </body>
+
 </html>
