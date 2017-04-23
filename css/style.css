@@ -14,15 +14,18 @@ body{
 	width: 95%;
 	/*margin-left: 5%;*/
 	/*display: inline-block;*/
-	padding: 1em;
+	padding: 1em 1em 0 1em;
+	height: 22em;
 }
 
 .description h1{
 	text-align: center;
+	line-height: 1em;
 }
 .description p{
 	text-align: justify;
 	padding: 1em;
+	line-height: 1em;
 }
 #ordinalSlider{
 	color: black;
@@ -34,14 +37,14 @@ body{
 }
 
 #bubbles{
-	height: 60%;
-	width: 50%;
+	height: 75%;
+	/*width: 50%;*/
 }
 
 .littlerefugees {
 	width: 70%;
 	margin: auto;
-	margin-bottom: 1em;
+	position: relative;
 }
 
 .littlerefugees img {
