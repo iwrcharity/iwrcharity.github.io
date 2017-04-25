@@ -33,7 +33,7 @@
       ]
     } , {
       'wrapper' : '#medium',
-      'duration' : '250%',
+      'duration' : '160%',
       'animations' :  [
       {
         'selector'    : '.medium-byline',
@@ -52,7 +52,7 @@
               'animations' :  []
             } , {
               'wrapper' : '#medium',
-              'duration' : '200%',
+              'duration' : '100%',
               'animations' :  [
               {
                 'selector'    : '.medium-byline-2',
@@ -68,7 +68,7 @@
               'animations' :  []
             } , {
               'wrapper' : '#medium',
-              'duration' : '250%',
+              'duration' : '150%',
               'animations' :  [
               {
                 'selector'    : '.medium-byline-3',
@@ -83,13 +83,22 @@
               ]
             } , {
               'wrapper' : '#medium',
-              'duration' : '250%',
+              'duration' : '130%',
               'animations' :  [
               {
                 'selector'    : '.medium-byline-4',
                 'opacity'     : [0, 1]
               } , {
                 'selector'    : '.medium-byline-3',
+                'opacity'     : [1, .3]
+              } 
+              ]
+            } , {
+              'wrapper' : '#medium',
+              'duration' : '120%',
+              'animations' : [
+              {
+                'selector'    : '.medium-byline-4',
                 'opacity'     : [1, .3]
               } , {
                 'selector'    : '.iphone-content',
@@ -106,29 +115,20 @@
               'animations' :  []
             } , {
               'wrapper' : '#medium',
-              'duration' : '200%',
+              'duration' : '150%',
               'animations' :  [
               {
                 'selector'    : '.iphone',
                 'translateY'  : ['-10', '-10'],
+                'opacity'     : -.05
+              } , {
+                'selector'    : '.medium-byline',
+                'translateY'  : ['-20', '-20'],
                 'opacity'     : -1
               } , {
-                'selector'    : '.medium-byline-4',
-                'opacity'     : [1, .3]
-              }  
-              ]
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '100%',
-              'animations' :  [
-              {
-                'selector'    : '.medium-byline',
-                'translateY'  : ['-30', '-30'],
-                'opacity'     : -2
-              } , {
                 'selector'    : '#mediumHomepage',
-                'translateY'  : ['-10', '-10'],
-                'opacity'     : -2
+                'translateY'  : ['-30', '-30'],
+                'opacity'     : -1
               } 
               ]
             } , {
@@ -149,7 +149,7 @@
               } ]
             }, {
               'wrapper' : '#two',
-              'duration' : '200%',
+              'duration' : '160%',
               'animations' :  [
               {
                 'selector'    : '.two-name-2',
@@ -158,17 +158,17 @@
               } , {
                 'selector'    : '.two-name-3',
                 'translateY'  : '-13%',
-                'opacity'     : [0, .8]
+                'opacity'     : [0, .7]
               } 
               ]
             } , {
               'wrapper' : '#two',
-              'duration' : '130%',
+              'duration' : '140%',
               'animations' :  [
               {
                 'selector'    : '.two-name-4',
                 'translateY'  : '-8%',
-                'opacity'     : [0, 4]
+                'opacity'     : [0, 2]
               } , {
                 'selector'    : '.two-name-5',
                 'translateY'  : '-7%',
@@ -191,58 +191,27 @@
               ]
             } , {
               'wrapper' : '#two',
-              'duration' : '160%',
+              'duration' : '140%',
               'animations' : [
               {
                 'selector'   : '.two-name-8',
-                'opacity'    : [0,2]
+                'translateY' : '1%',
+                'opacity'    : [0, 7]
               }
               ]
+            } , {
+              'wrapper' : '#two',
+              'duration' : '60%',
+              'animations' :  [ ]
             }, {
               'wrapper' : '#two',
-              'duration' : '240%',
-              'animations' :  [
+              'duration' : '150%',
+              'animations' : [
               {
-                'selector'    : '.two-name',
-                'translateY'  : '-5%',
-                'opacity'     : -1,
-                'scale'       : .5
-              } , {
-                'selector'    : '.two-name-2',
-                'translateY'  : '-4%',
-                'opacity'     : -1,
-                'scale'       : .5
-              } , {
-                'selector'    : '.two-name-3',
-                'translateY'  : '-4%',
-                'opacity'     : -1,
-                'scale'       : .5
-              }, {
-                'selector'    : '.two-name-4',
-                'translateY'  : '-3%',
-                'opacity'     : -1,
-                'scale'       : .5
-              }, {
-                'selector'    : '.two-name-5',
-                'translateY'  : '-3%',
-                'opacity'     : -1,
-                'scale'       : .5
-              }, {
-                'selector'    : '.two-name-6',
-                'translateY'  : '-2%',
-                'opacity'     : -1,
-                'scale'       : .5
-              }, {
-                'selector'    : '.two-name-7',
-                'translateY'  : '-2%',
-                'opacity'     : -1,
-                'scale'       : .5
-              }, {
-                'selector'    : '.two-name-8',
-                'translateY'  : '-1',
-                'opacity'     : -1,
-                'scale'       : .5
-              }]
+                'selector'   : '.two-name',
+                'opacity' : [0, -3]
+              }
+              ]
             }]
 
 
