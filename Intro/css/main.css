@@ -64,6 +64,10 @@ body {
   left: 10%;
   color: white;
   max-width: 22%;
+  font-size: 40px;
+  letter-spacing: 12px;
+  line-height: 1.5;
+  font-weight: 900;
 }
 .question,
 .definition1,
@@ -124,7 +128,7 @@ body {
 
 /* 3. Step 2
 --------------------------------------- */
-#two {
+#facts {
   position: fixed;
   top: 48%;
   left: 10%;
@@ -132,22 +136,26 @@ body {
   color: #fffff;
 }
 
-.two-name {
+.three_facts {
   font-size: 29px;
   font-weight: 700;
 }
 
-.two-name-1,
-.two-name-2,
-.two-name-4,
-.two-name-6,
-.two-name-7,
-.two-name-8
+.fact1,
+.fact2_1,
+.fact2_2,
+.defintion_sanctuary1,
+.definition_sanctuary2,
+.definition_sanctuary3,
+.definition_sanctuary4,
+.definition_sanctuary5,
+.definition_sanctuary6,
+.fact3
 {
   opacity: 0;
 }
 
-.two-name-3,
+/* .two-name-3,
 .two-name-5,
 .two-name-7
  {
@@ -156,4 +164,4 @@ body {
   font-size: 20px;
   font-weight: 200;
   opacity: 0;
-}
+} */
