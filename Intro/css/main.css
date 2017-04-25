@@ -59,26 +59,27 @@ body {
 }
 .medium-byline {
   position: fixed;
-  top: 63%;
-  left: 10%;
+  top: 100%;
+  left: 100%;
   color: white;
-  max-width: 70%;
+  max-width: 100%;
 }
 .medium-byline-1,
 .medium-byline-2,
 .medium-byline-3,
-.medium-byline-4
+.medium-byline-4,
+.medium-byline-5,
 {
   opacity: 0;
 }
-.raw-page {
+/* .raw-page {
   position: fixed;
   width: 45%;
   border-radius: 6px;
   box-shadow: inset 0 0 1px rgba(255,255,255,.3);
   border: 1px solid rgba(0,0,0,.2);
   background-clip: padding-box;
-}
+} */
 #mediumHomepage {
   top: 100%;
   right: 5%;
