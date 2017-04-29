@@ -182,7 +182,7 @@
               {
                 'selector'   : '.two-name-6',
                 'translateY' : '-3%',
-                'opacity'    : [0,4]
+                'opacity'    : [0, 4]
               } , {
                 'selector'   : '.two-name-7',
                 'translateY' : '-2%',
