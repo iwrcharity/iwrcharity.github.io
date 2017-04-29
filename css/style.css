@@ -1,10 +1,12 @@
 body{
 	background-color: #F2F9F6 !important ;
 	color:black !important;
+	font-family: 'Libre Baskerville' !important;
 }
 .header{
 	text-align: center;
 	color: black;
+	font-family: 'Rubik';
 }
 .description{
 	/*float: left;*/
@@ -21,11 +23,12 @@ body{
 .description h1{
 	text-align: center;
 	line-height: 1em;
+	font-family: 'Rubik';
 }
 .description p{
 	text-align: justify;
 	padding: 1em;
-	line-height: 1em;
+	line-height: 1.25em;
 }
 #ordinalSlider{
 	color: black;

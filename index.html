@@ -27,6 +27,8 @@
 	<link rel="stylesheet" href="css/d3.slider.css" type="text/css">
 	<link rel="stylesheet" href="css/foundation.min.css" type="text/css">
 	<link rel="stylesheet" href="css/animate.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:500" rel="stylesheet">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 </head>
 
@@ -145,46 +147,46 @@
 
 	// generates slider
 	// little bit of latency due to json load, how to fix????
-	events = d3.slider().scale(d3.scale.ordinal().domain(["NULL", "Syria", "Australia", "India", "Brazil"]).rangePoints([0, 1], 0.5)).axis(d3.svg.axis()).snap(true).value("NULL");
+	events = d3.slider().scale(d3.scale.ordinal().domain(["NULL", "Tibet", "Vietnam", "Laos and Cambodia", "Boat People"]).rangePoints([0, 1], 0.5)).axis(d3.svg.axis()).snap(true).value("NULL");
 
 	//handles slider movement
 	d3.select('#ordinalScale').call(events.on("slide", function (evt, value){
 		//fill this in with actual data
-		data={"Syria":
+		data={"Tibet":
 			{
-				name: 'SYR',
+				name: 'CHN',
 				refugees: '10',
-				caption:'Closer',
+				caption:'1970s Tibet',
 				bluemen: 20,
 				redmen: 10,
-				details:'Hey, I was doing just fine before I met you I drink too much and thats an issue But Im OK Hey, you tell your friends it was nice to meet them But I hope I never see them Again I know it breaks your heart Moved to the city in a broke-down car And four years, no calls Now youre looking pretty in a hotel bar And I, I, I, I, I cant stop No, I, I, I, I, I cant stop So, baby, pull me closer In the back seat of your Rover That I know you cant afford Bite that tattoo on your shoulder Pull the sheets right off the corner Of that mattress that you stole From your roommate back in Boulder We aint ever getting older We aint ever getting older We aint ever getting older You look as good as the day I met you I forget just why I left you, I was insane Stay and play that Blink-182 song That we beat to death in Tucson, OK'
+				details:'Tibet is a primarily Buddhist territory that has been governed as an autonomous region of China. In 1950, China sent in thousands of troops to enforce its claim on the region, leading to the exile of the 14th Dalai Lama. Throughout the 1960s and 70s, most of Tibet’s monasteries were destroyed and thousands of Tibetans are believed to have died under period of repressions and Marshall Law'
 			},
-			"Australia":
+			"Vietnam":
 			{
-				name: "AUS",
+				name: "VNM",
 				refugees: "20",
-				caption: "Dont let me down",
+				caption: "1975+ Vietnam",
 				bluemen: 30,
 				redmen: 20,
-				details:'Crashing, hit a wall Right now I need a miracle Hurry up now, I need a miracle Stranded, reaching out I call your name but youre not around I say your name but youre not around I need ya, I need ya, I need you right now Yeah, I need you right now So dont let me, dont let me, dont let me down I think Im losing my mind now Its in my head, darling, I hope That youll be here, when I need you the most So dont let me, dont let me, dont let me down D-dont let me down Dont let me down Dont let me down, down, down Dont let me down, dont let me down, down, down'
+				details:'The Vietnam War represented a  prolonged conflict between the communist government of North Vietnam and the government of South Vietnam and its main ally, the United States. The fall of the Saigon in 1975 lead to a mass exodus of people loyal to Southern Vietnamese forces. By 1977, around 20,000 people fled Vietnam as refugees, and it is estimated that nearly one-third of these people died from starvation, drowning, pirate activities, and being turned away before they could make it to safety. As many as 2 million civilians died at result of the Vietnam War.'
 			},
-			"India":
+			"Laos and Cambodia":
 			{
-				name: "IND",
+				name: "LAO",
 				refugees: "30",
-				caption: "Paris",
+				caption: "1980s Laos and Cambodia",
 				bluemen: 50,
 				redmen: 5,
-				details:'We were staying in Paris To get away from your parents And I thought, "Wow, if I could take this in a shot right now I dont think that we could work this out."Out on the terrace I dont know if its fair but I thought, "How could I let you fall by yourself While Im wasted with someone else?"If we go down then we go down together Theyll say you could do anything Theyll say that I was clever If we go down then we go down together Well get away with everything Les show them we are better Lets show them we are better Lets show them we are better'
+				details:'In 1975, communist Khmer Rouge forces took control over Cambodia, instituting a “radical reconstructuring” of the country that lead to the murdering of over 1.5 million Cambodians. After the invasion of the Vietnamese army in 1979, over 100,000 Cambodian refugees fled to resettle in the U.S.'
 			},
-			"Brazil":
+			"Boat People":
 			{
-				name: "BRA",
+				name: "VNM",
 				refugees: "40",
-				caption:"Someone Just Like This",
+				caption:"1980s Boat People",
 				bluemen: 55,
 				redmen: 30,
-				details: 'Ive been reading books of old The legends and the myths Achilles and his gold Hercules and his gifts Spidermans control And Batman with his fists And clearly I dont see myself upon that list But she said, where dyou wanna go? How much you wanna risk? Im not looking for somebody With some superhuman gifts Some superhero Some fairytale bliss Just something I can turn to Somebody I can kiss'
+				details: 'In late 1978, tragic wars between Indo-China broke out. Vietnam attacked Kampuchea (Cambodia) and later attacked Chinese forces in the North. The wars caused a rough estimate of 1.5 million people from Vietnam, Cambodia, and Laos to flee their countries. The U.S. accepted approximately 823,000 as a result of these conflicts.'
 			}
 		};
 
