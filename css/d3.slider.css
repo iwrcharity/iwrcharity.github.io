@@ -35,15 +35,15 @@
     position: absolute;
     width: 1.2em;
     height: 1.2em;
-    border: 1px solid #d3d3d3;
-    border-radius: 4px;
+    border: 1px solid #999999;
+    border-radius: 8px;
     background: #eee;
-    background: linear-gradient(to bottom, #eee 0%, #ddd 100%);
+    background: linear-gradient(to bottom, #FF6F59 0%, #BA5141 100%);
     z-index: 3;
 }
 
 .d3-slider-handle:hover {
-    border: 1px solid #999999;
+    border: 1px solid #7E7E7E;
 }
 
 .d3-slider-horizontal .d3-slider-handle {
