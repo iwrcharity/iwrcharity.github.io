@@ -22,7 +22,7 @@ body{
 }
 
 .description h1{
-	text-align: center;
+	text-align: left;
 	line-height: 1em;
 	font-family: 'Rubik';
 	font-size: 32px;
