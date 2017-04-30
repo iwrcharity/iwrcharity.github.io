@@ -17,7 +17,7 @@ body{
 	/*margin-left: 5%;*/
 	/*display: inline-block;*/
 	padding: 1em 1em 0 1em;
-	height: 28em;
+	height: 34em;
 	margin: auto;
 }
 
@@ -29,7 +29,7 @@ body{
 }
 .description p{
 	text-align: justify;
-	padding: 0 3em;
+	padding: 0 2em;
 	line-height: 1.25em;
 }
 #ordinalSlider{
@@ -37,9 +37,8 @@ body{
 }
 
 .slider {
-	max-width: 80%;
+	max-width: 90%;
 	margin: auto;
-	font-family: 'Libre Baskerville' !important;
 }
 
 #bubbles{
@@ -48,7 +47,8 @@ body{
 }
 
 .littlerefugees {
-	width: 70%;
+	width: 75%; 
+	/*20 refugees width*/
 	margin: auto;
 	position: relative;
 }
