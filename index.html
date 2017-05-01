@@ -270,22 +270,6 @@
 
     console.log(data[value]);
 
-
-    // clear arcs
-    map.arc([]);
-    //draw green arc from selected slider val to Ithaca
-    map.arc([
-	{
-		strokeColor: '#EF3054',
-		origin: data[value].name,
-		destination: {
-			// this is Ithaca
-			latitude: '42.4440',
-			longitude: '-76.5019'
-		}	
-	}
-	], 
-	{strokeWidth: 2, arcSharpness: 1.4});
     // clear bubbles
     map.bubbles([]);
     //draw red circle on selected slider val
@@ -309,6 +293,45 @@
 	//   }
 	// }
 	);
+	// hard fix for Burmese
+	if (value=="Burmese"){
+		
+
+		 // clear arcs
+	    map.arc([]);
+	    map.arc([
+		{
+			strokeColor: '#EF3054',
+			origin: {
+				latitude: '21.9162',
+				longitude: '95.9560'
+			},
+			destination: {
+				// this is Ithaca
+				latitude: '40.4440',
+				longitude: '-76.5015'
+			}	
+		}
+		], 
+		{strokeWidth: 2, arcSharpness: 1.4});
+	} else{
+	    // clear arcs
+	    map.arc([]);
+	    //draw green arc from selected slider val to Ithaca
+	    map.arc([
+		{
+			strokeColor: '#EF3054',
+			origin: data[value].name,
+			destination: {
+				// this is Ithaca
+				latitude: '42.4440',
+				longitude: '-76.5019'
+			}	
+		}
+		], 
+		{strokeWidth: 2, arcSharpness: 1.4});
+    }
+
 
 }));
 </script>
