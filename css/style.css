@@ -17,7 +17,7 @@ body{
 	/*margin-left: 5%;*/
 	/*display: inline-block;*/
 	padding: 1em 1em 0 1em;
-	height: 34em;
+	height: 30em;
 	margin: auto;
 }
 
@@ -31,6 +31,7 @@ body{
 	text-align: justify;
 	padding: 0 2em;
 	line-height: 1.25em;
+	font-size: 12px;
 }
 #ordinalSlider{
 	color: black;
@@ -56,5 +57,13 @@ body{
 .littlerefugees img {
 	width: 12px !important;
 	padding: 1px;
+}
+
+.numbers h1 {
+	text-align: left;
+	line-height: 1em;
+	font-family: 'Rubik';
+	font-size: 26px;
+	margin-left: 2em;
 }
 
