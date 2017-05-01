@@ -17,7 +17,7 @@ body{
 	/*margin-left: 5%;*/
 	/*display: inline-block;*/
 	padding: 1em 1em 0 1em;
-	height: 32em;
+	height: 30em;
 	margin: auto;
 }
 
@@ -31,6 +31,7 @@ body{
 	text-align: justify;
 	padding: 0 2em;
 	line-height: 1.25em;
+	font-size: 12px;
 }
 #ordinalSlider{
 	color: black;
