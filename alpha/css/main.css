@@ -129,28 +129,68 @@ body {
   color: #fffff;
 }
 
-.two-name {
+/*.two-name {
+  font-size: 29px;
+  font-weight: 700;
+  }*/
+
+  .two-name-1,
+  .two-name-2,
+  .two-name-4,
+  .two-name-6,
+  .two-name-7,
+  .two-name-8,
+  .two-name-9
+  {
+    opacity: 0;
+    font-size: 29px;
+    font-weight: 700;
+  }
+
+  .two-name-3,
+  .two-name-5,
+  .two-name-7
+  {
+    width: 90%;
+    margin-left: 5%;
+    font-size: 20px;
+    font-weight: 200;
+    opacity: 0;
+  }
+
+/* 3. Step 3
+--------------------------------------- */
+#three {
+  position: fixed;
+  top: 48%;
+  left: 10%;
+  width: 85%;
+  color: #fffff;
+}
+
+.three-10 {
+  opacity: 0;
   font-size: 29px;
   font-weight: 700;
 }
 
-.two-name-1,
-.two-name-2,
-.two-name-4,
-.two-name-6,
-.two-name-7,
-.two-name-8
-{
+.home-page {
+  display: inline-block;
+  width: 92%;
+
+}
+
+#home1 {
+  top: 100%;
   opacity: 0;
 }
 
-.two-name-3,
-.two-name-5,
-.two-name-7
- {
-  width: 90%;
-  padding-left: 5%;
-  font-size: 20px;
-  font-weight: 200;
+.plane-page {
+  display: inline-block;
+  width: 10%;
+}
+
+#airplane {
+  top: 50%;
   opacity: 0;
 }

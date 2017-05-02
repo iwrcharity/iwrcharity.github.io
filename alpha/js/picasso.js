@@ -40,179 +40,239 @@
         'translateY'  : '-40%'
       } , {
         'selector'    : '.medium-byline-1',
-                'opacity'     : [0, 1.75] // hack to accelrate opacity speed
-              } , {
-                'selector'    : '#mediumHomepage',
-                'translateY'  : '-90%'
-              }
-              ]
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '60%',
-              'animations' :  []
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '100%',
-              'animations' :  [
-              {
-                'selector'    : '.medium-byline-2',
-                'opacity'     : [0, 1]
-              } , {
-                'selector'    : '.medium-byline-1',
-                'opacity'     : [1, .3]
-              } 
-              ]
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '60%',
-              'animations' :  []
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '150%',
-              'animations' :  [
-              {
-                'selector'    : '.medium-byline-3',
-                'opacity'     : [0, 1]
-              } , {
-                'selector'    : '.medium-byline-2',
-                'opacity'     : [1, .3]
-              } , {
-                'selector'    : '.iphone',
-                'translateY'  : '-66%'
-              }
-              ]
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '130%',
-              'animations' :  [
-              {
-                'selector'    : '.medium-byline-4',
-                'opacity'     : [0, 1]
-              } , {
-                'selector'    : '.medium-byline-3',
-                'opacity'     : [1, .3]
-              } 
-              ]
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '120%',
-              'animations' : [
-              {
-                'selector'    : '.medium-byline-4',
-                'opacity'     : [1, .3]
-              } , {
-                'selector'    : '.iphone-content',
-                'translateX'  : '-13.3%'
-              } , {
-                'selector'    : '#mediumHomepage',
-                'translateY'  : ['-90%', '-90%'],
-                'scale'       : .9
-              }
-              ]
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '100%',
-              'animations' :  []
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '150%',
-              'animations' :  [
-              {
-                'selector'    : '.iphone',
-                'translateY'  : ['-10', '-10'],
-                'opacity'     : -.05
-              } , {
-                'selector'    : '.medium-byline',
-                'translateY'  : ['-20', '-20'],
-                'opacity'     : -1
-              } , {
-                'selector'    : '#mediumHomepage',
-                'translateY'  : ['-30', '-30'],
-                'opacity'     : -1
-              } 
-              ]
-            } , {
-              'wrapper' : '#medium',
-              'duration' : '60%',
-              'animations' :  [ ]
-            } , {
-              'wrapper' : '#two',
-              'duration' : '160%',
-              'animations' :  [
-              {
-                'selector'    : '.two-name',
-                'translateY'  : '-20%'
-              } , {
-                'selector'    : '.two-name-1',
-                'translateY'  : '-20%',
-                'opacity'     : [0, 2]
-              } ]
-            }, {
-              'wrapper' : '#two',
-              'duration' : '160%',
-              'animations' :  [
-              {
-                'selector'    : '.two-name-2',
-                'translateY'  : '-14%',
-                'opacity'     : [0, 3]
-              } , {
-                'selector'    : '.two-name-3',
-                'translateY'  : '-13%',
-                'opacity'     : [0, .7]
-              } 
-              ]
-            } , {
-              'wrapper' : '#two',
-              'duration' : '140%',
-              'animations' :  [
-              {
-                'selector'    : '.two-name-4',
-                'translateY'  : '-8%',
-                'opacity'     : [0, 2]
-              } , {
-                'selector'    : '.two-name-5',
-                'translateY'  : '-7%',
-                'opacity'     : [0, 2.5]
-              } 
-              ]
-            } , {
-              'wrapper' : '#two',
-              'duration' : '160%',
-              'animations' : [
-              {
-                'selector'   : '.two-name-6',
-                'translateY' : '-3%',
-                'opacity'    : [0, 4]
-              } , {
-                'selector'   : '.two-name-7',
-                'translateY' : '-2%',
-                'opacity'    : [0, .8]
-              }
-              ]
-            } , {
-              'wrapper' : '#two',
-              'duration' : '140%',
-              'animations' : [
-              {
-                'selector'   : '.two-name-8',
-                'translateY' : '1%',
-                'opacity'    : [0, 7]
-              }
-              ]
-            } , {
-              'wrapper' : '#two',
-              'duration' : '60%',
-              'animations' :  [ ]
-            }, {
-              'wrapper' : '#two',
-              'duration' : '150%',
-              'animations' : [
-              {
-                'selector'   : '.two-name',
-                'opacity' : [0, -3]
-              }
-              ]
-            }]
+        'opacity'     : [0, 1.75] // hack to accelrate opacity speed
+      } , {
+        'selector'    : '#mediumHomepage',
+        'translateY'  : '-90%'
+      }
+      ]
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '60%',
+      'animations' :  []
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '100%',
+      'animations' :  [
+      {
+        'selector'    : '.medium-byline-2',
+        'opacity'     : [0, 1]
+      } , {
+        'selector'    : '.medium-byline-1',
+        'opacity'     : [1, .3]
+      } 
+      ]
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '60%',
+      'animations' :  []
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '150%',
+      'animations' :  [
+      {
+        'selector'    : '.medium-byline-3',
+        'opacity'     : [0, 1]
+      } , {
+        'selector'    : '.medium-byline-2',
+        'opacity'     : [1, .3]
+      } , {
+        'selector'    : '.iphone',
+        'translateY'  : '-66%'
+      }
+      ]
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '130%',
+      'animations' :  [
+      {
+        'selector'    : '.medium-byline-4',
+        'opacity'     : [0, 1]
+      } , {
+        'selector'    : '.medium-byline-3',
+        'opacity'     : [1, .3]
+      } 
+      ]
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '120%',
+      'animations' : [
+      {
+        'selector'    : '.medium-byline-4',
+        'opacity'     : [1, .3]
+      } , {
+        'selector'    : '.iphone-content',
+        'translateX'  : '-13.3%'
+      } , {
+        'selector'    : '#mediumHomepage',
+        'translateY'  : ['-90%', '-90%'],
+        'scale'       : .9
+      }
+      ]
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '100%',
+      'animations' :  []
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '150%',
+      'animations' :  [
+      {
+        'selector'    : '.iphone',
+        'translateY'  : ['-10', '-10'],
+        'opacity'     : -.05
+      } , {
+        'selector'    : '.medium-byline',
+        'translateY'  : ['-20', '-20'],
+        'opacity'     : -1
+      } , {
+        'selector'    : '#mediumHomepage',
+        'translateY'  : ['-30', '-30'],
+        'opacity'     : -1
+      } 
+      ]
+    } , {
+      'wrapper' : '#medium',
+      'duration' : '60%',
+      'animations' :  [ ]
+    } , {
+      'wrapper' : '#two',
+      'duration' : '160%',
+      'animations' :  [
+      {
+        'selector'    : '.two-name-1',
+        'translateY'  : '-41%',
+        'opacity'     : [0, 2]
+      } ]
+    }, {
+      'wrapper' : '#two',
+      'duration' : '160%',
+      'animations' :  [
+      {
+        'selector'    : '.two-name-2',
+        'translateY'  : '-35%',
+        'opacity'     : [0, 3]
+      } , {
+        'selector'    : '.two-name-3',
+        'translateY'  : '-34%',
+        'opacity'     : [0, .7]
+      } 
+      ]
+    } , {
+      'wrapper' : '#two',
+      'duration' : '140%',
+      'animations' :  [
+      {
+        'selector'    : '.two-name-4',
+        'translateY'  : '-30%',
+        'opacity'     : [0, 2]
+      } , {
+        'selector'    : '.two-name-5',
+        'translateY'  : '-29%',
+        'opacity'     : [0, 2.5]
+      } 
+      ]
+    } , {
+      'wrapper' : '#two',
+      'duration' : '160%',
+      'animations' : [
+      {
+        'selector'   : '.two-name-6',
+        'translateY' : '-24%',
+        'opacity'    : [0, 4]
+      } , {
+        'selector'   : '.two-name-7',
+        'translateY' : '-23%',
+        'opacity'    : [0, .8]
+      }
+      ]
+    } , {
+      'wrapper' : '#two',
+      'duration' : '120%',
+      'animations' : [
+      {
+        'selector'   : '.two-name-8',
+        'translateY' : '-19%',
+        'opacity'    : [0, 7]
+      }
+      ]
+    } , {
+      'wrapper' : '#two',
+      'duration' : '120%',
+      'animations' : [
+      {
+        'selector'   : '.two-name-9',
+        'translateY' : '-14%',
+        'opacity'    : [0, 2]
+      }
+      ]
+    } , {
+      'wrapper' : '#two',
+      'duration' : '80%',
+      'animations' : []
+    }, {
+
+      'wrapper' : '#two',
+      'duration' : '120%',
+      'animations' : [
+      {
+        'selector'  : '.two-name-9',
+        'opacity'   : -2
+      } , {
+       'selector'  : '.two-name-8',
+       'opacity'   : -2
+     } , {
+       'selector'  : '.two-name-7',
+       'opacity'   : -2
+     }, {
+       'selector'  : '.two-name-6',
+       'opacity'   : -2
+     }, {
+       'selector'  : '.two-name-5',
+       'opacity'   : -2
+     }, {
+       'selector'  : '.two-name-4',
+       'opacity'   : -2
+     }, {
+       'selector'  : '.two-name-3',
+       'opacity'   : -2
+     }, {
+       'selector'  : '.two-name-2',
+       'opacity'   : -2
+     }, {
+       'selector'  : '.two-name-1',
+       'opacity'   : -2
+     }
+     ]
+   }, {
+    'wrapper' : '#three',
+    'duration' : '110%',
+    'animations' : [
+    {
+      'selector'   : '.three-10',
+      'translateY' : '-36%',
+      'opacity'     : [0, 3]
+    }
+    ]
+  }, {
+    'wrapper' : '#three',
+    'duration' : '240%',
+    'animations' : [
+    {
+      'selector'   : '#home1',
+      'opacity' : [0, 7]
+    } , {
+      'selector'   : '#airplane',
+      'translateX' : '113%',
+      'translateY' : '-20%',
+      'opacity' : [0, 2.5]
+    }
+    ]
+  }
+  ]
+
+
+
 
 
 
