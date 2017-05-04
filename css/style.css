@@ -18,7 +18,7 @@ body{
 	/*margin-left: 5%;*/
 	/*display: inline-block;*/
 	padding: 2em 0em 0 1em;
-	height: 32em;
+	height: 26em;
 	margin: auto;
 }
 
@@ -51,7 +51,7 @@ body{
 .littlerefugees {
 	width: 75%; 
 	/*20 refugees width*/
-	margin: auto;
+	margin: auto auto 1em;
 	position: relative;
 }
 
