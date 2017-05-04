@@ -56,11 +56,18 @@
 			</div>
 			<div class="numbers">
 				<h1>Refugees in Ithaca</h1>
-				<div class="littlerefugees"></div>
+				<div class="littlerefugees">
+					<img class='pic' src='blueman.svg'>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="slider">
+			<div class="timeline row">
+				<div class="small-12 large-4 columns"><h2>1970</h2></div>
+				<div class="small-12 large-4 columns center"><h2>1990</h2></div>
+				<div class="small-12 large-4 columns right"><h2>2010</h2></div>
+			</div>
 			<div id= "ordinalScale"></div>
 	</div>
 </section>
@@ -150,7 +157,7 @@
 
 	// generates slider
 	// little bit of latency due to json load, how to fix????
-	events = d3.slider().scale(d3.scale.ordinal().domain(["Tibetan (1970)", "Vietnamese", "Lao & Cambodian", "Boat People", "Amerasian", "Russian", "Tibetan (1990)", "Burmese", "Karen", "Iraqi & Afghan" ]).rangePoints([0, 1], 0.5)).axis(d3.svg.axis()).snap(true).value("NULL");
+	events = d3.slider().scale(d3.scale.ordinal().domain(["Tibetan (1970)", "Vietnamese", "Lao & Cambodian", "Boat People", "Amerasian", "Russian", "Tibetan (1990)", "Cuban", "Bosnian", "Burmese", "Karen", "Iraqi & Afghan" ]).rangePoints([0, 1], 0.5)).axis(d3.svg.axis()).snap(true).value("NULL");
 
 	//handles slider movement
 	d3.select('#ordinalScale').call(events.on("slide", function (evt, value){
@@ -219,6 +226,29 @@
 				redmen: 1,
 				details: 'After hundreds of Tibetans were arrested, imprisoned, and killed by Chinese soldiers during the late 1980s and early 1990s during demonstrations against the Chinese occupation of Tibet, hundreds of Tibetans fled Tibet per year, with 120,000 Tibetans having resettling in India and Nepa through this time period.  The 1990 Immigration Act, although it did not officially call Tibetans refugees because of relations with China, opened 1,000 immigrant visas to “qualified displaced Tibetans,” providing them with permanent residence and work authorization (but no Federal funds or other usual refugee benefits for three years).  The Tibetans were resettled in 10 cluster sites in the U.S., including Ithaca, New York City, San Francisco, and Minneapolis.'
 			},
+
+			"Cuban":
+			{
+				name: "CUB",
+				refugees: "40",
+				caption:"1990s Cuban",
+				bluemen: 10,
+				redmen: 1,
+				details: 'As many as 250,000 Cubans entered the U.S. by boat between April and October of 1980 as part of the Mariel Boatlift. Refugees fled the country from the Port of Mariel due, in large part, to a sharp downturn in the Cuban economy, after Fidel Castro announced on April 20 that anyone wishing to leave the island could do so provided they had someone to pick them up. Cuban exiles in the US. hired boats, resulting in dozens of primarily Cuban and Haitian refugees arriving daily. Approximately 125,000 Cubans arrived in the U.S. on nearly 2,000 boats; 27 died. Upon their arrival, many Cubans were placed in refugee camps. Others were held in federal prisons pending deportation hearings. The majority of refugees were ordinary Cubans. Many had been allowed to leave Cuba for reasons which, in the United States, were either loyalty-neutral or protected: tens of thousands were Seventh-Day Adventists or Jehovahs Witnesses, for example. Some had been declared "anti-socialist" by their CDRs back in Cuba. In the end, only 2.2% (or 2,746) of the refugees were classified as serious or violent criminals under U.S. law and denied citizenship on that basis.'
+			},
+
+
+			"Bosnian":
+			{
+
+				name: "BIH",
+				refugees: "40",
+				caption:"1990s Bosnian, Serbian, Kosovar",
+				bluemen: 10,
+				redmen: 1,
+				details: 'In April 1992, the government of the Yugoslav republic of Bosnia-Herzegovina declared its independence from Yugoslavia. Over the next several years, Bosnian Serb forces, with the backing of the Serb-dominated Yugoslav army, targeted both Bosniak (Bosnian Muslim) and Croatian civilians for atrocious crimes resulting in the deaths of some 100,000 people (80 percent Bosniak) by 1995. It was the worst act of genocide since the Holocaust. The U.S. resettled 169,000 refugees from Bosnia, along with a large number of Kosavar refugees, with the first planeload arriving at Fort Dix in 1999.'
+			},
+
 			"Burmese":
 			{
 				name: "MMR",
