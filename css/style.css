@@ -7,6 +7,7 @@ body{
 	text-align: center;
 	color: black;
 	font-family: 'Rubik';
+	font-size: 40px;
 }
 .description{
 	/*float: left;*/
@@ -16,7 +17,7 @@ body{
 	width: 90%;
 	/*margin-left: 5%;*/
 	/*display: inline-block;*/
-	padding: 1em 1em 0 1em;
+	padding: 2em 0em 0 1em;
 	height: 32em;
 	margin: auto;
 }
@@ -25,7 +26,7 @@ body{
 	text-align: left;
 	line-height: 1em;
 	font-family: 'Rubik';
-	font-size: 32px;
+	font-size: 28px;
 }
 .description p{
 	text-align: justify;
@@ -63,7 +64,7 @@ body{
 	text-align: left;
 	line-height: 1em;
 	font-family: 'Rubik';
-	font-size: 26px;
+	font-size: 24px;
 	margin-left: 2em;
 }
 
