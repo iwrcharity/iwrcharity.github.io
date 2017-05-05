@@ -78,12 +78,58 @@ body{
 	font-family: 'Rubik';
 }
 
-.center {
+./*center {
 	text-align: center;
-}
+}*/
 
 .right {
 	text-align: right;
 }
 
+.become{
+	color: white;
+	/*padding:30%;*/
+	background-color: black;
+	/*margin-top: 10%;*/
+}
+.logoAlign{
+	width: 400px;
+}
+.bigX{
+	font-size: 45px;
+	font-weight: 900;
+	margin: 8% 0;
+}
 
+.aboutDescript{
+	font-size: 18px;
+
+}
+.aboutSection{
+	margin: 15%;
+	background-color: red;
+}
+.totalMap{
+	margin: 5% 0;
+}
+
+/*animations*/
+
+.fromTopIn
+{
+	transition: transform 1.0s ease, opacity 1.0s ease;
+	transform: translate(0,0);
+	opacity: 1.0;
+}
+
+.fromTopOut
+{
+	transition: transform 1.0s ease, opacity 1.0s ease;
+	transform: translate(0,-10px);
+	opacity: 0.0;
+}
+.welcome{
+	margin-top: 5%;
+	margin-bottom: 28%;
+	background-color: pink;
+}

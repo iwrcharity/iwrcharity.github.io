@@ -16,40 +16,140 @@
 	<link rel="stylesheet" href="css/animate.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rubik:500" rel="stylesheet">
+
+	<!-- // <script src="js/jquery.aniview.js"></script> -->
+	<script src="js/ScrollTrigger.min.js"></script>
+	<script>
+
+	document.addEventListener('DOMContentLoaded', function(){
+	var trigger = new ScrollTrigger({
+				offset: {
+			    x: 0,
+			    y: 5
+			  },
+			   // once: true,
+			   addHeight: true,
+			   // centerHorizontal: true,
+			});
+		}, document.body, window);
+	
+
+    </script>
 	
 </head>
 <body>
-	<h1 class="header"> Tracing Refugees to Ithaca </h1>
-	<div class="row">
-		<!-- Map to be appended -->
-		<div id="bubbles" class="small-12 large-7 columns"></div>
 
-		<div class="small-12 large-5 columns">
-			<div class ="description">
-			<h1 class="caption"> The Initial Wave</h1>
-				<p class="details">Refugee resettlement to Ithaca began at the end of the Vietnam War. Cornell University professors, who had built professional and personal ties while visiting Vietnam, were initially responsible with connecting refugees to resources in Ithaca. Given the historical interest in international affairs and the resources available at Cornell, Ithaca expanded from just an educational gateway community to a 'safe haven'. The refugee population also included refugees from all over Southeast Asia, including Cambodia and Loa. 
-				</p> 
+	<div class="row welcome">
+		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+				<h1 class="text-center header" style="margin:10%"> STEPS TO BECOME A REFUGEE </h1>
+	 	</div>
+	</div>
+
+	
+	<div class="row">
+		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">
+			
+			<div class="row">
+					<h1 class="header"> Tracing Refugees to Ithaca </h1>
 			</div>
-			<div class="numbers">
-				<h1>Refugees in Ithaca</h1>
-				<div class="littlerefugees">
-					<img class='pic' src='blueman.svg'>
+			<div class="row">	
+				<div id="bubbles" class="small-12 large-7 columns "></div>
+				<div class="small-12 large-5 columns">
+					<div class ="description">
+					<h1 class="caption"> The Initial Wave</h1>
+						<p class="details">Refugee resettlement to Ithaca began at the end of the Vietnam War. Cornell University professors, who had built professional and personal ties while visiting Vietnam, were initially responsible with connecting refugees to resources in Ithaca. Given the historical interest in international affairs and the resources available at Cornell, Ithaca expanded from just an educational gateway community to a 'safe haven'. The refugee population also included refugees from all over Southeast Asia, including Cambodia and Loa. 
+						</p> 
+					</div>
+					<div class="numbers">
+						<h1>Refugees in Ithaca</h1>
+						<div class="littlerefugees">
+							<img class='pic' src='blueman.svg'>
+						</div>
+					</div>
 				</div>
+			</div>
+
+			<div class="slideInDown">
+				
+					<div class="timeline row">
+						<div class="small-12 large-2 columns"><h2>1970</h2></div>
+						<div class="small-12 large-2 columns left"><h2>1980</h2></div>
+						<div class="small-12 large-2 columns right"><h2>1990</h2></div>
+						<div class="small-12 large-4 columns right"><h2>2010</h2></div>
+					</div>
+					<div id= "ordinalScale"></div>
 			</div>
 		</div>
 	</div>
-	<div class="slider">
+	
+	<div class="row aboutSection">
+		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+				<div class="text-center">
+					<h1 class="header"> ABOUT </h1>
+			 	</div>
+			 	<div class="large-6 columns text-center"> 
+			 		<img class="logoAlign" src="img/iwr_logo.svg"> 
+			 		<span class="large-12 columns bigX">X</span>
+			 		<img class="logoAlign" src="img/CUSD_logo.svg">
+			 	</div>
 
-		<!-- years above the timeline -->
-			<div class="timeline row">
-				<div class="small-12 large-2 columns"><h2>1970</h2></div>
-				<div class="small-12 large-2 columns left"><h2>1980</h2></div>
-				<div class="small-12 large-2 columns right"><h2>1990</h2></div>
-				<div class="small-12 large-4 columns right"><h2>2000</h2></div>
-				<div class="small-12 large-2 columns right"><h2>2010</h2></div>
-			</div>
-			<div id= "ordinalScale"></div>
+			 	<div class="large-6 columns">
+			 		<p class="aboutDescript">In the Spring of 2017, Cornell University Sustainable Design partnered with Ithaca Welcomes Refugees, a community organization that fosters a welcoming environment for refugees who come to the region. Together, we created this website to provide historical and factual information about refugees in Ithaca and to provide some context to the current refugees crisis. <br><br><a href="https://cusd.cornell.edu/">Click here</a> to view our sources for information collected in this website</p>
+		 		</div>
+	 	</div>
 	</div>
+
+	<div class="row aboutSection">
+		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+				<div class="text-center">
+					<h1 class="header"> ABOUT </h1>
+			 	</div>
+			 	<div class="large-6 columns text-center"> 
+			 		<img class="logoAlign" src="img/iwr_logo.svg"> 
+			 		<span class="large-12 columns bigX">X</span>
+			 		<img class="logoAlign" src="img/CUSD_logo.svg">
+			 	</div>
+
+			 	<div class="large-6 columns">
+			 		<p class="aboutDescript">In the Spring of 2017, Cornell University Sustainable Design partnered with Ithaca Welcomes Refugees, a community organization that fosters a welcoming environment for refugees who come to the region. Together, we created this website to provide historical and factual information about refugees in Ithaca and to provide some context to the current refugees crisis. <br><br><a href="https://cusd.cornell.edu/">Click here</a> to view our sources for information collected in this website</p>
+		 		</div>
+	 	</div>
+	</div>
+
+	<div class="row aboutSection">
+		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+				<div class="text-center">
+					<h1 class="header"> ABOUT </h1>
+			 	</div>
+			 	<div class="large-6 columns text-center"> 
+			 		<img class="logoAlign" src="img/iwr_logo.svg"> 
+			 		<span class="large-12 columns bigX">X</span>
+			 		<img class="logoAlign" src="img/CUSD_logo.svg">
+			 	</div>
+
+			 	<div class="large-6 columns">
+			 		<p class="aboutDescript">In the Spring of 2017, Cornell University Sustainable Design partnered with Ithaca Welcomes Refugees, a community organization that fosters a welcoming environment for refugees who come to the region. Together, we created this website to provide historical and factual information about refugees in Ithaca and to provide some context to the current refugees crisis. <br><br><a href="https://cusd.cornell.edu/">Click here</a> to view our sources for information collected in this website</p>
+		 		</div>
+	 	</div>
+	</div>
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
 		<script>
 		var map = new Datamap({
 			projection: 'mercator',
@@ -314,6 +414,7 @@
 
 	}));
 	</script>
+	
 </body>
 
 </html>
