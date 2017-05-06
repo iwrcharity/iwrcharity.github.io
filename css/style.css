@@ -123,13 +123,18 @@ ul {
 	font-family: 'Rubik';
 }
 
-./*center {
+.center {
 	text-align: center;
-	}*/
+}
 
-	.right {
-		text-align: right;
-	}
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
 
 	.become{
 		color: white;
