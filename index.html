@@ -1,267 +1,251 @@
 <html>
 <head>
-	<!-- using v3 rather than v4 because datamaps wont operate without it -->
 	<script src="https://d3js.org/d3.v3.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://d3js.org/topojson.v2.min.js"></script>
+	<script src="http://d3js.org/topojson.v2.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 	<script src="js/datamaps.world.min.js"></script>
-	<script type="text/javascript" src="//use.typekit.net/rws3een.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
-
-
 	<script src="js/d3.slider.js"></script>
-
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<link rel="stylesheet" href="css/d3.slider.css" type="text/css">
 	<link rel="stylesheet" href="css/foundation.min.css" type="text/css">
 	<link rel="stylesheet" href="css/animate.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Rubik:500" rel="stylesheet">
-
-
-	<!-- // <script src="js/jquery.aniview.js"></script> -->
 	<script src="js/ScrollTrigger.min.js"></script>
-	<script>
-
-	document.addEventListener('DOMContentLoaded', function(){
-		var trigger = new ScrollTrigger({
-			offset: {
-				x: 0,
-				y: 300
-			},
-			   // once: true,
-			   // addHeight: true,
-			   centerHorizontal: true,
-			});
-	}, document.body, window);
-	
-
-	</script>
+	<script src="js/script.js"></script>
 	
 </head>
 <body>
-
-	<div class="row welcome">
-		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
-			<h1 class="welcome-header"> STEPS TO BECOME A REFUGEE </h1>
-			<p class="welcome-header2"> A SHORT LIST </p>
-		</div>
-	</div>
-	<div>
-		
-		<div class="welcome-1">
-			<div class="small-12 large-4 large-offset-1 columns">
-				<p class="medium-byline">
-					<span class="medium-byline-1">1. Refugees must identify themselves to a UN refugee agency,</span>
-					<span class="medium-byline-2">which collects and reviews documents,</span>
-					<span class="medium-byline-3">performs initial assessment,</span>
-					<span class="medium-byline-4">and conducts initial interview.</span>
-				</p>
-			</div>
-			<div class="small-12 large-6 columns">
-				<img class="raw-page" src="img/unhcr.jpg">
-				<div class="iphone">
-					<!--<img class="iphone-frame" src="img/iphoneframe.png">-->
-					<div class="iphone-viewport">
-						<span class="iphone-content">Less than 1% of global refugee population will move forward in this process.</span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="small-12 large-9 large-offset-1 columns">
-			<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
-				<div class="welcome-2">
-					<div class="two-name-1">2. Applicants are received by a federally-funded resettlement support center.</div>
-					<div class="two-name-2">3. Applicants go through Biographic Security checks.</div>
-					<ul class="two-name-3">
-						<li>This is the highest level of security checks of any category of traveler to the US</li>
-						<li>This process can be repeated over and over if new information is provided before applicant can proceed</li>
-					</ul>
-					<div class="two-name-4">4. Applicants are interviewed by Dept. of Homeland Security.</div>
-					<ul class="two-name-5">
-						<li>Re-interviews conducted if any additional or concerning information comes up</li>
-						<li>Cases can be placed on hold at this point</li>
-					</ul>
-					<div class="two-name-6">5. Applicants go through a round of Biometric Security checks.</div>
-					<ul class="two-name-7">
-						<li>Fingerprints taken by U.S. government employees</li>
-					</ul>
-					<div class="two-name-8">6. Applicants go through medical checks.</div>
-					<div class="two-name-9">7. Applicants are assigned to resettlement location</div>
-				</div>
-			</div>
+	<nav>
+		<div class="menuicon" onclick="menuiconchange(this)">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
 		</div>
 
-		<div class="small-12 large-9 large-offset-1 columns">
-			<div class="welcome-3">
-				<div class="three-10">8. Applicants travel to resettlement locations</div>
-				<div>
-					<img id="home1" class="home-page" src="img/home1.svg">
-				</div>
-			</div>
-		</div>
-	</div>
+		<ul class="overlaymenu">
+			<li>
+				<a class="navlink" href="#intro" onclick="navlinkchange(this)">Intro</a>
+			</li>
+			<li>
+				<a class="navlink" href="#mapsloc" onclick="navlinkchange(this)">Interactive Map</a>
+			</li>
+			<li>
+				<a class="navlink" href="#stepsto" onclick="navlinkchange(this)">Steps to Become a Refugee</a>
+			</li>
+<!-- 			<li>
+				<a class="navlink" href="#" onclick="navlinkchange(this)">Sources</a>
+			</li> -->
+		</ul>
+	</nav>
 
-	
-	<div class="row">
-		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">
-			
+	<script>
+
+
+		</script>
+
+		<div id="intro" class="row intro">
+			<div>	
+				<h5 class="text-center intro-header"> Ithaca Welcomes Refugees x Cornell University Sustainable Design </h5>
+				<p class="text-center intro-1">Who is a refugee?</p>
+			</div>
 			<div class="row">
-				<h1 class="header"> Tracing Refugees to Ithaca </h1>
-			</div>
-			<div class="row">	
-				<div id="bubbles" class="small-12 large-7 columns "></div>
-				<div class="small-12 large-5 columns">
-					<div class ="description">
-						<h1 class="caption"> The Initial Wave</h1>
-						<p class="details">Refugee resettlement to Ithaca began at the end of the Vietnam War. Cornell University professors, who had built professional and personal ties while visiting Vietnam, were initially responsible with connecting refugees to resources in Ithaca. Given the historical interest in international affairs and the resources available at Cornell, Ithaca expanded from just an educational gateway community to a 'safe haven'. The refugee population also included refugees from all over Southeast Asia, including Cambodia and Loa. 
-						</p> 
+				<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+					<p class="text-center small-12 large-8 large-offset-2 columns intro-2"> noun  ref.u.gee \ˌre-fyu̇-ˈjē, ˈre-fyu̇-ˌ\</br></br>Someone who has been forced to flee his or her country because of persecution, war, or violence. A refugee has a well-founded fear of persecution for reasons of race, religion, nationality, political opinion or membership in a particular social group. </p>
+					<div class="small-12 large-11 columns">
+						<img class="refugee-photo" src="img/refugee-1.jpg">
+						<img class="refugee-photo" src="img/refugee-2.jpg">
+						<img class="refugee-photo" src="img/refugee-3.jpg">
 					</div>
-					<div class="numbers">
-						<h1>Refugees in Ithaca</h1>
-						<div class="littlerefugees">
-							<img class='pic' src='blueman.svg'>
+				</div>
+			</div>
+
+			<div class="small-12 large-11 large-offset-0 columns facts">
+				<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+					<p class="fact-1">1. Nearly 1 in 100 people worldwide are displaced from their homes.</p>
+					<p class="fact-1">2. Successful refugee resettlement and assimilation requires strong connections between urban resources, including education, charity, job development and industry.</p>
+					<p class="fact-1">3. Ithaca became a sanctuary city in 1985 for Salvadoran and Guatemalan refugees. As of February 2017, Mayor Svante Myrick has amended Ithaca Municipal Code to reinforce Ithaca as a sanctuary city</p>
+				</div>
+			</div>
+		</div>
+
+		<div id="mapsloc" class="row map">
+			<div data-scroll="toggle(.fromTopIn, .fromTopOut)">
+				<div class="row">
+					<h3 class="intro-header"> TRACING REFUGEES TO TOMPKINS COUNTY </h3>
+				</div>
+				<div class="row">	
+					<div id="bubbles" class="small-12 large-7 columns "></div>
+					<div class="small-12 large-5 columns">
+						<div class ="description">
+							<h1 class="caption"> The Initial Wave</h1>
+							<p class="details">Refugee resettlement to Ithaca began at the end of the Vietnam War. Cornell University professors, who had built professional and personal ties while visiting Vietnam, were initially responsible with connecting refugees to resources in Ithaca. Given the historical interest in international affairs and the resources available at Cornell, Ithaca expanded from just an educational gateway community to a 'safe haven'. The refugee population also included refugees from all over Southeast Asia, including Cambodia and Loa. 
+							</p> 
+						</div>
+						<div class="numbers">
+							<h1>Refugees in Ithaca</h1>
+							<div class="small-12 large-8 columns">
+
+								<div class="littlerefugees">
+									<img class='pic' src='img/blueman.svg'>
+								</div>
+							</div>
+							<div class="small-12 large-4 columns">
+								<div class="legend">
+									<div class="small-12 large-4 columns">
+										<img class='pic' src='img/redman.svg'>
+									</div>
+									<div class="small-12 large-8 columns legend-text">
+										<h2> = 40 </h2>
+										<h3> or less refugees </h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slideInDown">
+					<div class="timeline row">
+						<div class="small-12 large-2 columns"><h2>1970</h2></div>
+						<div class="small-12 large-2 columns left"><h2>1980</h2></div>
+						<div class="small-12 large-4 columns center"><h2>1990</h2></div>
+						<div class="small-12 large-2 columns right"><h2>2000</h2></div>
+						<div class="small-12 large-2 columns right"><h2>2010</h2></div>
+					</div>
+					<div id= "ordinalScale"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="stepsto" class="row welcome">
+			<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+				<h1 class="welcome-header"> STEPS TO BECOME A REFUGEE </h1>
+				<p class="welcome-header2"> A SHORT LIST </p>
+			</div>
+		</div>
+		<div>
+			<div class="welcome-1">
+				<div class="small-12 large-4 large-offset-1 columns">
+					<p class="medium-byline">
+						<span class="medium-byline-1">1. Refugees must identify themselves to a UN refugee agency,</span>
+						<span class="medium-byline-2">which collects and reviews documents,</span>
+						<span class="medium-byline-3">performs initial assessment,</span>
+						<span class="medium-byline-4">and conducts initial interview.</span>
+					</p>
+				</div>
+				<div class="small-12 large-6 columns">
+					<img class="raw-page" src="img/unhcr.jpg">
+					<div class="iphone">
+						<!--<img class="iphone-frame" src="img/iphoneframe.png">-->
+						<div class="iphone-viewport">
+							<span class="iphone-content">Less than 1% of global refugee population will move forward in this process.</span>
 						</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="slideInDown">
-				
-				<div class="timeline row">
-					<div class="small-12 large-2 columns"><h2>1970</h2></div>
-					<div class="small-12 large-2 columns left"><h2>1980</h2></div>
-					<div class="small-12 large-4 columns center"><h2>1990</h2></div>
-					<div class="small-12 large-2 columns right"><h2>2000</h2></div>
-					<div class="small-12 large-2 columns right"><h2>2010</h2></div>
+			<div class="row">
+				<div class="small-12 large-11 large-offset-1   columns">
+					<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+						<div class="welcome-2">
+							<div class="two-name">2. Applicants are received by a federally-funded resettlement support center.</div>
+							<div class="two-name">3. Applicants go through Biographic Security checks.</div>
+							<ul class="two-list">
+								<li>This is the highest level of security checks of any category of traveler to the US</li>
+								<li>This process can be repeated over and over if new information is provided before applicant can proceed</li>
+							</ul>
+							<div class="two-name">4. Applicants are interviewed by Dept. of Homeland Security.</div>
+							<ul class="two-list">
+								<li>Re-interviews conducted if any additional or concerning information comes up</li>
+								<li>Cases can be placed on hold at this point</li>
+							</ul>
+							<div class="two-name">5. Applicants go through a round of Biometric Security checks.</div>
+							<ul class="two-list">
+								<li>Fingerprints taken by U.S. government employees</li>
+							</ul>
+							<div class="two-name">6. Applicants go through medical checks.</div>
+							<div class="two-name">7. Applicants are assigned to resettlement location</div>
+						</div>
+					</div>
 				</div>
-				<div id= "ordinalScale"></div>
+
+				<div class="small-12 large-12 large-offset-1   columns">
+					<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
+						<div class="two-name-8">8. Applicants travel to resettlement locations</div>
+						<img id="home1" class="home-page" src="img/home1.svg">
+					</div>
+				</div>
+
 			</div>
 		</div>
-	</div>
-	
-	<div class="row aboutSection">
-		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
-			<div class="text-center">
-				<h1 class="header"> ABOUT </h1>
-			</div>
-			<div class="large-6 columns text-center"> 
-				<img class="logoAlign" src="img/iwr_logo.svg"> 
-				<span class="large-12 columns bigX">X</span>
-				<img class="logoAlign" src="img/CUSD_logo.svg">
-			</div>
 
-			<div class="large-6 columns">
-				<p class="aboutDescript">In the Spring of 2017, Cornell University Sustainable Design partnered with Ithaca Welcomes Refugees, a community organization that fosters a welcoming environment for refugees who come to the region. Together, we created this website to provide historical and factual information about refugees in Ithaca and to provide some context to the current refugees crisis. <br><br><a href="https://cusd.cornell.edu/">Click here</a> to view our sources for information collected in this website</p>
+		<div class="row">
+			<div id="takeaction">
+				<h2 class="intro-header">TAKE ACTION</h2>
+				<div id="organizations" class="row"></div>
+			<!-- <div class="small-12 large-6 columns org">
+				<div class="small-12 large-4 columns">
+				</div>
+				<div class="small-12 large-8 columns">
+					<h4>Organization</h4>
+					<p>Description</p>
+					<a href="#">Link</a>
+				</div>
 			</div>
+			<div class="small-12 large-6 columns org">
+				<div class="small-12 large-4 columns">
+				</div>
+				<div class="small-12 large-8 columns">
+					<h4>Organization</h4>
+					<p>Description</p>
+					<a href="#">Link</a>
+				</div>
+			</div> -->
 		</div>
 	</div>
-
-	<div class="row aboutSection">
-		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
-			<div class="text-center">
-				<h1 class="header"> SOURCES </h1>
-			</div>
-			<div class="large-6 columns text-center"> 
-				<img class="logoAlign" src="img/iwr_logo.svg"> 
-				<span class="large-12 columns bigX">X</span>
-				<img class="logoAlign" src="img/CUSD_logo.svg">
-			</div>
-
-			<div class="large-6 columns">
-				<p class="aboutDescript">In the Spring of 2017, Cornell University Sustainable Design partnered with Ithaca Welcomes Refugees, a community organization that fosters a welcoming environment for refugees who come to the region. Together, we created this website to provide historical and factual information about refugees in Ithaca and to provide some context to the current refugees crisis. <br><br><a href="https://cusd.cornell.edu/">Click here</a> to view our sources for information collected in this website</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="row aboutSection">
-		<div data-scroll="toggle(.fromTopIn, .fromTopOut)">	
-			<div class="text-center">
-				<h1 class="header"> ABOUT </h1>
-			</div>
-			<div class="large-6 columns text-center"> 
-				<img class="logoAlign" src="img/iwr_logo.svg"> 
-				<span class="large-12 columns bigX">X</span>
-				<img class="logoAlign" src="img/CUSD_logo.svg">
-			</div>
-
-			<div class="large-6 columns">
-				<p class="aboutDescript">In the Spring of 2017, Cornell University Sustainable Design partnered with Ithaca Welcomes Refugees, a community organization that fosters a welcoming environment for refugees who come to the region. Together, we created this website to provide historical and factual information about refugees in Ithaca and to provide some context to the current refugees crisis. <br><br><a href="https://cusd.cornell.edu/">Click here</a> to view our sources for information collected in this website</p>
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
 
 
 
 	<script>
+
+	/* 
+	*
+	*
+	Handles map generation using datamaps and d3
+	API: https://datamaps.github.io/
+		 https://github.com/d3/d3/blob/master/API.md
+	*
+	*
+	*/
+
 	var map = new Datamap({
 		projection: 'mercator',
 		element: document.getElementById("bubbles"),
-		  // done: function(datamap) {
-		  //           datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+		//di
+		setProjection: function(element) {
+		    var projection = d3.geo.equirectangular()
+		      .center([20, -3])
+		      .rotate([4.4, 0])
+		      .scale(200)
+		      .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+		    var path = d3.geo.path()
+		      .projection(projection);
 
-		  //           	// clears bubbles on each click of a country
-		  //           	$('#bubbles g.bubbles').empty();
-
-		  //           	//enables click a country, draw arc from that point to Ithaca
-		  //       		console.log("Entering arc drawing");
-		  //       		// empty arcs
-		  //       		map.arc([]);
-		  //       		map.arc([
-		  //       		{
-		  //       			strokeColor: '#6AE368',
-		  //       			origin: geography.id,
-		  //       			destination: {
-		  //       				// this is Ithaca
-		  //       				latitude: '42.4440',
-		  //       				longitude: '-76.5019'
-		  //       			}	
-		  //       		}
-		  //   			], {strokeWidth: 1, arcSharpness: 1.4});
-
-		  //           	console.log(geography);
-		  //           });
-		  //       },
-
-		  geographyConfig: {
-		  	popupOnHover: false,
-		  	highlightOnHover: false,
-		  	highlightFillColor: '#6AE368'
+		    return {path: path, projection: projection};
 		  },
-		  //disables on hover for the bubbles
+		  // disables pop up and highlight on hover for the bubbles
 		  bubblesConfig: {
 		  	popupOnHover: false,
+		  	highlightOnHover: false,
 		  },
 		  fills: {
 		  	// sets to black for default
 		  	defaultFill: '#225D3C',
-		    // controls inner colors of the bubbles
-		    // SYR: '#EF3054',
-		    // AUS: '#EF3054',
-		    // IND: '#EF3054',
-		    // BRA: '#EF3054'
-
-		}
-	});
+		  }
+		});
 
 		// generates slider
-		// little bit of latency due to json load, how to fix????
 		events = d3.slider().scale(d3.scale.ordinal().domain(["Tibetan (1970)", "Vietnamese", "Lao & Cambodian", "Boat People", "Amerasian", "Russian", "Tibetan (1990)", "Cuban", "Bosnian", "Burmese", "Karen", "Iraqi & Afghan" ]).rangePoints([0, 1], 0.5)).axis(d3.svg.axis()).snap(true).value("NULL");
 
 		//handles slider movement
@@ -385,28 +369,24 @@
 			},
 		};
 
-
 		//remove and append this ticker's related data
 		$('.description').empty();
 		$('.description').append("<h1 class='caption'>"+data[value].caption+"</h1><p class='details'>"
 			+data[value].details+"<br>Refugees: "+data[value].refugees+"</p>");
 
 
-
+		// svg people icons
 		$('.littlerefugees').empty();
 
 		val=data[value].bluemen;	 
 		//add little men for numbers of refugees here 
 		for(i=0; i<= val; i++){
-			$('.littlerefugees').append("<img class='pic' src='blueman.svg'>");
+			$('.littlerefugees').append("<img class='pic' src='img/blueman.svg'>");
 		};
 
 		for(i=0; i<data[value].redmen; i++){
-			$('.littlerefugees').append("<img class='pic animated bounceIn' src='redman.svg'>");
+			$('.littlerefugees').append("<img class='pic animated bounceIn' src='img/redman.svg'>");
 		}
-
-
-		console.log(data[value]);
 
 	    // clear bubbles
 	    map.bubbles([]);
@@ -419,22 +399,10 @@
 	    	refugees: data[value].refugees,
 	    	borderColor: '#FF0000',
 	    	fillKey: data[value].name,
-	    }
-	    ]
-		// on hover, this is what will be displayed
-		// {
-		//   popupTemplate: function(geo, data) {
-		//   	// console.log(data);
-		//   	// console.log(data.name);
-		//   	// console.log(data.refugees);
-		//   	return '<h1>Country Name: '+data.name+'</h1><h3>Number of Refugees: '+ data.refugees+'</h3>';
-		//   }
-		// }
-		);
+	    }]);
+
 		// hard fix for Burmese
 		if (value=="Burmese"){
-			
-
 			 // clear arcs
 			 map.arc([]);
 			 map.arc([
@@ -452,7 +420,8 @@
 			}
 			], 
 			{strokeWidth: 2, arcSharpness: 1.4});
-			} else{
+		} 
+		else {
 		    // clear arcs
 		    map.arc([]);
 		    //draw green arc from selected slider val to Ithaca
@@ -465,13 +434,11 @@
 					latitude: '42.4440',
 					longitude: '-76.5019'
 				}	
-			}
-			], 
+			}], 
 			{strokeWidth: 2, arcSharpness: 1.4});
 		}
-
-
 	}));
+
 </script>
 
 </body>
